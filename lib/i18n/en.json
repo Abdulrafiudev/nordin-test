@@ -1,0 +1,23 @@
+{
+  "workspace": "Workspace", "workspaceName": "Demo workspace", "workspaceHint": "Your sales workspace",
+  "companies": "Companies", "directory": "COMPANY DIRECTORY", "description": "Good relationships start with a little context.",
+  "company": "Company", "domain": "Domain", "status": "Status", "created": "Created", "name": "Company name",
+  "create": "Create company", "search": "Search", "searchPlaceholder": "Search companies or domains…", "searchLabel": "Search companies",
+  "allStatuses": "All statuses", "filterStatus": "Filter by status", "clearFilters": "Clear filters", "sortBy": "Sort by",
+  "new": "New", "researching": "Researching", "contacted": "Contacted", "qualified": "Qualified", "rejected": "Rejected",
+  "loading": "Loading companies…", "updating": "Updating results…", "listError": "We couldn’t load the companies. Please try again.",
+  "stale": "Showing previous results.", "retry": "Try again", "emptyTitle": "No companies yet", "emptyDescription": "Create your first company to get started.",
+  "noMatches": "No matching companies", "noMatchesDescription": "Try another search or clear your filters.", "outOfRange": "This page is empty", "firstPage": "Go to first page",
+  "showing": "Showing", "of": "of", "results": "companies", "page": "Page", "previous": "Previous", "next": "Next",
+  "openCompany": "Open company", "noDomain": "No domain", "signOut": "Sign out", "language": "Interface language",
+  "details": "Company details", "detailsDescription": "A little context for your next conversation.", "createDescription": "Add a new relationship to your workspace.",
+  "close": "Close drawer", "cancel": "Cancel", "save": "Save changes", "saving": "Saving…", "saved": "Company saved successfully.", "createdSuccess": "Company created successfully.",
+  "drawerLoading": "Loading company details…", "drawerError": "We couldn’t load this company.", "notFound": "Company not found", "notFoundDescription": "This company is no longer available. You can close this panel and choose another.",
+  "namePlaceholder": "e.g. Acme Studio", "domainPlaceholder": "e.g. acme.com", "optional": "optional", "required": "Enter a company name.", "invalid": "Check this value.",
+  "validationSummary": "Check the highlighted fields.", "saveError": "We couldn’t save your changes. Your edits are still here. Please try again.", "invalidJson": "The request could not be processed. Please try again.",
+  "conflictTitle": "This company has changed", "conflictDescription": "Someone else saved a newer version. Your edits are still here. Reload the latest version to review before saving.",
+  "reloadLatest": "Reload latest and keep my edits", "reloading": "Loading latest version…", "reloadError": "We couldn’t reload the latest version. Your edits are safe here. Try again.",
+  "reviewTitle": "Review your changes", "reviewDescription": "Your edited fields are kept below. Other fields now use the latest values. Compare before saving.", "latestValues": "Latest saved values", "saveReviewed": "Save reviewed changes", "version": "Version",
+  "signInTitle": "Welcome to your workspace", "signInDescription": "A little context. Better conversations. Sign in to explore your company directory.", "signIn": "Enter workspace", "demoLabel": "Demo sign-in", "demoNote": "This assessment uses a local demo session. No account or password needed.", "tokenLabel": "Demo session token", "tokenRequired": "Enter a non-empty token.", "sessionLoading": "Opening your workspace…", "sessionExpired": "Please sign in to continue.",
+  "navigation": "Main navigation", "skipContent": "Skip to content", "errorTitle": "Something went wrong", "errorDescription": "Please try loading this page again.", "companyCount": "Company directory", "backCompanies": "Back to companies", "signInStorageError": "Your browser couldn’t save the demo session. Allow session storage and try again."
+}

@@ -1,0 +1,23 @@
+{
+  "workspace": "Werkruimte", "workspaceName": "Demo-werkruimte", "workspaceHint": "Je verkoopwerkruimte",
+  "companies": "Bedrijven", "directory": "BEDRIJVENGIDS", "description": "Goede relaties beginnen met een beetje context.",
+  "company": "Bedrijf", "domain": "Domein", "status": "Status", "created": "Aangemaakt", "name": "Bedrijfsnaam",
+  "create": "Bedrijf aanmaken", "search": "Zoeken", "searchPlaceholder": "Zoek bedrijven of domeinen…", "searchLabel": "Bedrijven zoeken",
+  "allStatuses": "Alle statussen", "filterStatus": "Filter op status", "clearFilters": "Filters wissen", "sortBy": "Sorteren op",
+  "new": "Nieuw", "researching": "In onderzoek", "contacted": "Benaderd", "qualified": "Gekwalificeerd", "rejected": "Afgewezen",
+  "loading": "Bedrijven laden…", "updating": "Resultaten bijwerken…", "listError": "De bedrijven konden niet worden geladen. Probeer het opnieuw.",
+  "stale": "Eerdere resultaten worden getoond.", "retry": "Opnieuw proberen", "emptyTitle": "Nog geen bedrijven", "emptyDescription": "Maak je eerste bedrijf aan om te beginnen.",
+  "noMatches": "Geen overeenkomende bedrijven", "noMatchesDescription": "Probeer een andere zoekopdracht of wis je filters.", "outOfRange": "Deze pagina is leeg", "firstPage": "Naar de eerste pagina",
+  "showing": "Resultaten", "of": "van", "results": "bedrijven", "page": "Pagina", "previous": "Vorige", "next": "Volgende",
+  "openCompany": "Bedrijf openen", "noDomain": "Geen domein", "signOut": "Uitloggen", "language": "Interfacetaal",
+  "details": "Bedrijfsgegevens", "detailsDescription": "Een beetje context voor je volgende gesprek.", "createDescription": "Voeg een nieuwe relatie toe aan je werkruimte.",
+  "close": "Paneel sluiten", "cancel": "Annuleren", "save": "Wijzigingen opslaan", "saving": "Opslaan…", "saved": "Bedrijf succesvol opgeslagen.", "createdSuccess": "Bedrijf succesvol aangemaakt.",
+  "drawerLoading": "Bedrijfsgegevens laden…", "drawerError": "Dit bedrijf kon niet worden geladen.", "notFound": "Bedrijf niet gevonden", "notFoundDescription": "Dit bedrijf is niet meer beschikbaar. Sluit dit paneel en kies een ander bedrijf.",
+  "namePlaceholder": "bijv. Acme Studio", "domainPlaceholder": "bijv. acme.com", "optional": "optioneel", "required": "Vul een bedrijfsnaam in.", "invalid": "Controleer deze waarde.",
+  "validationSummary": "Controleer de gemarkeerde velden.", "saveError": "Je wijzigingen konden niet worden opgeslagen. Je invoer staat er nog. Probeer het opnieuw.", "invalidJson": "De aanvraag kon niet worden verwerkt. Probeer het opnieuw.",
+  "conflictTitle": "Dit bedrijf is gewijzigd", "conflictDescription": "Iemand anders heeft een nieuwere versie opgeslagen. Je invoer staat er nog. Laad de nieuwste versie om deze te controleren.",
+  "reloadLatest": "Nieuwste laden en mijn invoer behouden", "reloading": "Nieuwste versie laden…", "reloadError": "De nieuwste versie kon niet worden geladen. Je invoer blijft bewaard. Probeer opnieuw.",
+  "reviewTitle": "Controleer je wijzigingen", "reviewDescription": "Je gewijzigde velden zijn hieronder behouden. Andere velden gebruiken nu de nieuwste waarden. Vergelijk voordat je opslaat.", "latestValues": "Laatst opgeslagen waarden", "saveReviewed": "Gecontroleerde wijzigingen opslaan", "version": "Versie",
+  "signInTitle": "Welkom in je werkruimte", "signInDescription": "Meer context. Betere gesprekken. Log in en ontdek je bedrijvengids.", "signIn": "Werkruimte openen", "demoLabel": "Demo-inlog", "demoNote": "Deze opdracht gebruikt een lokale demosessie. Geen account of wachtwoord nodig.", "tokenLabel": "Demosessietoken", "tokenRequired": "Vul een niet-leeg token in.", "sessionLoading": "Je werkruimte openen…", "sessionExpired": "Log in om verder te gaan.",
+  "navigation": "Hoofdnavigatie", "skipContent": "Naar inhoud", "errorTitle": "Er is iets misgegaan", "errorDescription": "Probeer deze pagina opnieuw te laden.", "companyCount": "Bedrijvengids", "backCompanies": "Terug naar bedrijven", "signInStorageError": "Je browser kon de demosessie niet opslaan. Sta sessieopslag toe en probeer opnieuw."
+}
