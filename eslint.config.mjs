@@ -6,5 +6,5 @@ export default defineConfig([
   ...nextVitals,
   ...nextTs,
   { rules: { "@typescript-eslint/no-explicit-any": "error" } },
-  globalIgnores([".next/**", "node_modules/**", "coverage/**", "next-env.d.ts"]),
+  globalIgnores([".next/**", "node_modules/**", ".pnpm-store/**", "coverage/**", "next-env.d.ts"]),
 ]);
