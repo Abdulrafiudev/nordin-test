@@ -10,6 +10,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { setDemoToken } from "@/lib/auth/session";
 import { LocaleProvider } from "@/lib/i18n/provider";
 import messages from "@/lib/i18n/en.json";
+import dutchMessages from "@/lib/i18n/nl.json";
 import { seedCompanies } from "@/server/companies-store";
 import { server } from "./server";
 
@@ -161,5 +162,42 @@ describe("Companies user workflows", () => {
     expect(sessionStorage.getItem("nordin-demo-token")).toBeNull();
     expect(navigation.replace).toHaveBeenCalledTimes(1);
     expect(client.getQueriesData({ queryKey: companyKeys.all }).every(([, data]) => data === undefined)).toBe(true);
+  });
+
+  it("offers language switching inside the modal and preserves edits when server messages refresh", async () => {
+    const user = userEvent.setup();
+    const client = new QueryClient();
+    function feature(locale: "en" | "nl") {
+      const dictionary = locale === "en" ? messages : dutchMessages;
+      return <QueryClientProvider client={client}><LocaleProvider locale={locale} messages={dictionary}><AuthProvider>
+        <CompaniesScreen heading={<h1>{dictionary.companies}</h1>} />
+      </AuthProvider></LocaleProvider></QueryClientProvider>;
+    }
+    const view = render(feature("en"));
+    await user.click(await screen.findByRole("button", { name: "Acme Studio" }));
+    const input = await screen.findByRole("textbox", { name: "Company name" });
+    await user.clear(input);
+    await user.type(input, "Keep my draft");
+    await user.click(within(screen.getByRole("dialog")).getByRole("button", { name: "NL" }));
+    expect(navigation.refresh).toHaveBeenCalled();
+    expect(document.cookie).toContain("locale=nl");
+    view.rerender(feature("nl"));
+    expect(screen.getByRole("textbox", { name: "Bedrijfsnaam" })).toBe(input);
+    expect(input).toHaveValue("Keep my draft");
+    expect(screen.getByRole("button", { name: "Wijzigingen opslaan" })).toBeInTheDocument();
+  });
+
+  it("wraps keyboard focus in both directions inside the drawer", async () => {
+    const user = userEvent.setup();
+    renderFeature();
+    await user.click(await screen.findByRole("button", { name: "Acme Studio" }));
+    const save = await screen.findByRole("button", { name: "Save changes" });
+    const close = screen.getByRole("button", { name: "Close drawer" });
+    save.focus();
+    expect(save).toHaveFocus();
+    await user.tab();
+    expect(close).toHaveFocus();
+    await user.tab({ shift: true });
+    expect(save).toHaveFocus();
   });
 });

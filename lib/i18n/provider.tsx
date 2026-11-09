@@ -14,8 +14,8 @@ export function LanguageToggle() {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
   return <div className="language-toggle" role="group" aria-label={m.language} aria-busy={pending}>
-    {(["en", "nl"] as const).map((value) => <button key={value} type="button" aria-pressed={locale === value} disabled={pending}
-      onClick={() => { document.cookie = `locale=${value}; Path=/; Max-Age=31536000; SameSite=Lax`; startTransition(() => router.refresh()); }}>
+    {(["en", "nl"] as const).map((value) => <button key={value} type="button" aria-pressed={locale === value} aria-disabled={pending}
+      onClick={() => { if (pending) return; document.cookie = `locale=${value}; Path=/; Max-Age=31536000; SameSite=Lax`; startTransition(() => router.refresh()); }}>
       {value.toUpperCase()}
     </button>)}
   </div>;

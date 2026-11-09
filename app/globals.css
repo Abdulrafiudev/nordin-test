@@ -119,6 +119,7 @@ h1 { font-size: 29px; line-height: 1.25; letter-spacing: -.9px; font-weight: 600
 .drawer-header { padding: 30px 30px 26px; border-bottom: 1px solid var(--line); position: relative; }
 .drawer-heading-icon { display: inline-grid; place-items: center; height: 42px; width: 42px; border: 1px solid #e5ece6; background: #f3f7f3; border-radius: 10px; color: #64846b; margin-bottom: 18px; }
 .close-drawer { position: absolute; top: 25px; right: 25px; }
+.drawer-header .language-toggle { position: absolute; top: 26px; right: 66px; }
 .drawer-header h2 { font-size: 21px; letter-spacing: -.5px; margin: 0 0 9px; font-weight: 600; }
 .drawer-header p { color: #69737f; font-size: 12px; margin: 0; line-height: 1.6; }
 .company-form { display: flex; flex-direction: column; flex: 1; }

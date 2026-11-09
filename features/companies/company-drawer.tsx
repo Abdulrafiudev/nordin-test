@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Building2, X } from "lucide-react";
 import { useAuth } from "@/lib/auth/provider";
-import { useLocale } from "@/lib/i18n/provider";
+import { LanguageToggle, useLocale } from "@/lib/i18n/provider";
 import { ApiError } from "./api";
 import { companyOptions } from "./queries";
 import { CompanyForm } from "./company-form";
@@ -32,8 +32,18 @@ export function CompanyDrawer({ drawer, onClose, onSaved }: Props) {
     };
   }, []);
   const missing = query.error instanceof ApiError && query.error.status === 404;
-  return <dialog ref={dialog} className="company-drawer" aria-labelledby="drawer-title" aria-describedby="drawer-description" onCancel={(event) => { event.preventDefault(); onClose(); }}>
+  return <dialog ref={dialog} className="company-drawer" aria-labelledby="drawer-title" aria-describedby="drawer-description" onCancel={(event) => { event.preventDefault(); onClose(); }}
+    onKeyDown={(event) => {
+      if (event.key !== "Tab") return;
+      const controls = Array.from(event.currentTarget.querySelectorAll<HTMLElement>("button:not(:disabled), input:not(:disabled), select:not(:disabled), summary, a[href], [tabindex='0']"))
+        .sort((a, b) => a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1);
+      const first = controls[0];
+      const last = controls.at(-1);
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    }}>
     <div className="drawer-header"><span className="drawer-heading-icon"><Building2 size={20} /></span><button className="icon-button close-drawer" onClick={onClose} aria-label={m.close}><X size={20} /></button>
+      <LanguageToggle />
       <h2 id="drawer-title">{drawer.mode === "create" ? m.create : m.details}</h2><p id="drawer-description">{drawer.mode === "create" ? m.createDescription : m.detailsDescription}</p>
     </div>
     {drawer.mode === "create" ? <CompanyForm company={null} onClose={onClose} onSaved={onSaved} />
